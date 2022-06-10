@@ -1,0 +1,33 @@
+{% extends "admin/challenges/update.html" %}
+
+{% block header %}
+<div class="alert alert-secondary" role="alert">
+	<p>
+		Multiple choice challenges allow users to select a single flag from a list of choices.
+	</p>
+
+	<ul>
+		<li>Make sure to use <strong>Max Attempts</strong> to limit the amount of tries a user receives</li>
+		<li>Copy the correct choice from your description and create a <strong>static</strong> flag with it on the left</li>
+	</ul>
+</div>
+{% endblock %}
+
+{% block message %}
+<div class="form-group">
+	<label>
+		Message<br>
+		<small class="form-text text-muted">
+			<p>Within the description message you can insert choices for your multiple choice question using
+				the following syntax:</p>
+			<p>
+				* () Choice 1<br>
+				* () Choice 2<br>
+				* () Choice 3<br>
+			</p>
+			<p>You can then copy the correct choice as a flag</p>
+		</small>
+	</label>
+	<textarea id="desc-editor" class="form-control chal-desc-editor markdown" name="description" rows="10">{{ challenge.description }}</textarea>
+</div>
+{% endblock %}

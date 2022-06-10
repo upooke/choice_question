@@ -1,0 +1,15 @@
+{% extends "challenge.html" %}
+
+{% block description %}
+    {{ challenge.description }}
+{% endblock %}
+
+{% block input %}
+    <input id="challenge-id" class="challenge-id" type="hidden" value="{{ challenge.id }}">
+{% endblock %}
+
+{% block submit %}
+    <button id="challenge-submit" class="challenge-submit" type="submit">
+        Submit
+    </button>
+{% endblock %}
